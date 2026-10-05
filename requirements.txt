@@ -1,0 +1,6 @@
+art==6.5
+colorama==0.4.6
+fire==0.7.1
+pyfiglet==1.0.4
+termcolor==3.3.0
+text2art==0.2.0
