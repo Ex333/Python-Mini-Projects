@@ -30,7 +30,23 @@ def show_servers():
         print("*"*30)
 
 def check_server():
-    pass
+    for server in servers:
+        for name, info in server.items():
+
+            if info["status"].lower() == "online":
+                print("*" * 20)
+                print(f"{name} -> ONLINE")
+                print("*" * 20)
+
+            elif info["status"].lower() == "offline":
+                print("*" * 20)
+                print(f"{name} -> OFFLINE")
+                print("*" * 20)
+
+            else:
+                print(f"{name} -> UNKNOWN STATUS")
+
+
 
 
 
@@ -44,7 +60,7 @@ while True:
     elif choice == "2" or choice.lower() == "show servers":
         show_servers()
     elif choice == "3" or choice.lower() == "check server":
-        show_servers()
+        check_server()
     elif choice == "4" or choice.lower() == "exit":
         break
     else:
